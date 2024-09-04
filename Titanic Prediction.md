@@ -84,8 +84,6 @@ X_test_scaled = scaler.transform(X_test)
 # Predict survival on test data
 test_predictions = model.predict(X_test_scaled)
 
-# ... rest of your code ...
-
 # Save predictions to a CSV file
 submission_df = pd.DataFrame({'PassengerId': test_df['PassengerId'], 'Survived': test_predictions})
 submission_df.to_csv('gender_submission.csv', index=False)
